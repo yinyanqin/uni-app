@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "suchangping <76996241@qq.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
