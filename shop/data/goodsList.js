@@ -6,6 +6,7 @@ let data = {
 			"goods_lit_img": "http://img.fozgo.com/uploads/20200410/7cd72c67ea77024b4360038ac99e55b6.png",
 			"x_price": 12000,
 			"c_x_price": 0,
+			"content":"<p>详情内容，赋泽谷康养体验营（赠1名额）</p>"
 		},
 		{
 			"id":2,

@@ -12,6 +12,8 @@ const carousel = require("../data/Carousel");
 const goodsList = require("../data/goodsList");
 const gettimgcategory = require("../data/gettimgcategory");
 const getimages = require("../data/getimages");
+const getnewslist = require("../data/getnewslist");
+
 
 app.use(bodyparser.json()); //对传过来的json参数进行处理
 app.use(bodyparser.urlencoded({
@@ -31,9 +33,9 @@ app.get('/carousel', function (req, res) { //轮播图
 });
 
 app.get('/goodsList', function (req, res) {  //商品列表
-	// res.setHeader('Access-Control-Allow-Origin', '*');
-	// res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
-	// res.setHeader('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
+	res.setHeader('Access-Control-Allow-Origin', '*');
+	res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
+	res.setHeader('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
   res.status(200).json({
     success: true,
     obj: goodsList
@@ -78,7 +80,17 @@ app.get('/getimages', function (req, res) {
   // }
 });
 // .............................
-
+// 资讯
+app.get('/getnewslist', function (req, res) { 
+    //解决跨域问题
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
+    res.setHeader('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
+  res.status(200).json({
+    success: true,
+    obj: getnewslist
+  })
+});
 
 
 

@@ -74,5 +74,8 @@
 
 .icon-Sign:before { content: "\e615"; }
 
-
+.gomeImgLoad{ /* 处理详情内容中的图片 */
+	width: 750rpx;
+	height: auto;
+}
 </style>

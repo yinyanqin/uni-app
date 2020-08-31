@@ -1,6 +1,6 @@
 <template>
 	<view class="goods_list">
-		<view class="goods_item" v-for="item in goods" :key="item.id">
+		<view class="goods_item" @click="navigator(item.id)" v-for="item in goods" :key="item.id">
 			<image :src="item.goods_lit_img"></image>
 			<view class="price">
 				<text>￥{{ item.x_price }}</text>
@@ -13,7 +13,12 @@
 
 <script>
 	export default{
-		props:['goods']
+		props:['goods'],
+		methods:{
+			navigator(id){
+				this.$emit('goodsItemClick',id)
+			}
+		}
 	}
 </script>
 

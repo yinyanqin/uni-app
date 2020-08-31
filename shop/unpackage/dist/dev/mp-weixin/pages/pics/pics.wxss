@@ -29,13 +29,16 @@ page {
 }
 .pics {
   height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
 }
 .pics .left {
   width: 200rpx;
   height: 100%;
   border-right: 1px solid #eee;
 }
-.pics view {
+.pics .left view {
   height: 60px;
   line-height: 60px;
   color: #333;
@@ -43,8 +46,22 @@ page {
   font-size: 30rpx;
   border-top: 1px solid #eee;
 }
-.pics .active {
+.pics .left .active {
   background-color: #b50e03;
   color: #fff;
+}
+.pics .right {
+  width: 520rpx;
+  height: 100%;
+  margin: 10rpx auto;
+}
+.pics .right .item image {
+  width: 520rpx;
+  height: 520rpx;
+  border-radius: 5px;
+}
+.pics .right .item text {
+  font-size: 30rpx;
+  line-height: 60rpx;
 }
 
