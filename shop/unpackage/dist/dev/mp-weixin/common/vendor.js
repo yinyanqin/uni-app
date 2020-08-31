@@ -1728,43 +1728,7 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ 11:
-/*!************************************!*\
-  !*** E:/uni-app/shop/uttil/api.js ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.myRequest = void 0;var BASE_URL = "http://127.0.0.1:3000";
-var myRequest = function myRequest(options) {
-  return new Promise(function (resolve, reject) {
-    uni.request({
-      url: BASE_URL + options.url,
-      method: options.method || "GET",
-      data: options.data || {},
-      success: function success(res) {
-        if (!res.data.success) {//如果返回来的success为真 则赋值
-          return uni.showToast({
-            title: "获取数据失败" });
-
-        }
-        resolve(res);
-      },
-      fail: function fail(err) {
-        return uni.showToast({
-          title: "请求接口失败失败" });
-
-        reject(err);
-      } });
-
-  });
-};exports.myRequest = myRequest;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
-
-/***/ }),
-
-/***/ 119:
+/***/ 109:
 /*!*****************************************************!*\
   !*** E:/uni-app/shop/components/uni-icons/icons.js ***!
   \*****************************************************/
@@ -1903,6 +1867,42 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   "cloud-download-filled": "\uE8E9",
   "headphones": "\uE8BF",
   "shop": "\uE609" };exports.default = _default;
+
+/***/ }),
+
+/***/ 11:
+/*!************************************!*\
+  !*** E:/uni-app/shop/uttil/api.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.myRequest = void 0;var BASE_URL = "http://127.0.0.1:3000";
+var myRequest = function myRequest(options) {
+  return new Promise(function (resolve, reject) {
+    uni.request({
+      url: BASE_URL + options.url,
+      method: options.method || "GET",
+      data: options.data || {},
+      success: function success(res) {
+        if (!res.data.success) {//如果返回来的success为真 则赋值
+          return uni.showToast({
+            title: "获取数据失败" });
+
+        }
+        resolve(res);
+      },
+      fail: function fail(err) {
+        return uni.showToast({
+          title: "请求接口失败失败" });
+
+        reject(err);
+      } });
+
+  });
+};exports.myRequest = myRequest;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 
